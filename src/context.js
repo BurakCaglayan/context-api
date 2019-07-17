@@ -47,6 +47,7 @@ export class UserProvider extends Component {
     }
   }
   render() {
+    console.log(this.state);
     return (
       <UserContext.Provider value={this.state}>
         {this.props.children}
