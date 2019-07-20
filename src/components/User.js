@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import UserConsumer from '../context'
 import posed from 'react-pose'
+import axios from 'axios'
 
 const Animation = posed.div({
   visible: {
@@ -34,13 +35,20 @@ class User extends Component {
     })
   }
 
-  onDeleteUser = (dispatch, e) => {
+  onDeleteUser = async (dispatch, e) => {
     const { id } = this.props;
+    //Delete request
+    await axios.delete(`http://localhost:3004/users/${id}`)
+
     //Consumer Dİspatch
     dispatch({ type: "DELETE_USER", payload: id });
   }
+  
+  componentWillUnmount() {
+    console.log("Component Will Unmount")
+  }
 
-  render() {
+  render() {    
     const { name, department, salary } = this.props;
     const { isVisible } = this.state;
     return (

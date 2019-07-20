@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "unique-1",
+      "name": "Burak",
+      "salary": "1000",
+      "department": "Yazılım"
+    },
+    {
+      "id": "unique-2",
+      "name": "Türel",
+      "salary": "5000",
+      "department": "Grafik"
+    },
+    {
+      "name": "Melih",
+      "department": "Müzik",
+      "salary": "2500",
+      "id": "FH612Bb"
+    }
+  ]
+}
